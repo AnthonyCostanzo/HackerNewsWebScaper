@@ -14,12 +14,12 @@ votes = soup.select('.score')
 votes2 = soup.select('.score')
 mega_links = links + links2
 mega_votes = votes + votes2
+
 def get_votes(votes):
     votesPattern = re.compile(r'\d+')
     votes = int("".join(votesPattern.findall(votes)))
     return votes
   
-    
 def create_custom_hn(links,votes):
     hn = []
     for idx,item in enumerate(links):
